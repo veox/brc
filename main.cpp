@@ -35,7 +35,8 @@ void create_cert_if_not_exists(const std::string& filename)
 
 int main(int argc, char** argv)
 {
-    if (argc > 1 && (argv[1] == "-h" || argv[1] == "--help"))
+    if (argc > 1 && ((std::string)argv[1] == "-h" ||
+		     (std::string)argv[1] == "--help"))
     {
         log_info() << "Usage: brc [ZMQ_TRANSPORT] [CLIENT_CERTS_DIR]";
         log_info() << "Example: brc tcp://*:8989";

@@ -1,3 +1,3 @@
 default:
-	g++ main.cpp btcnet.cpp $(shell pkg-config --cflags --libs libczmq++ libbitcoin) -lboost_filesystem -o brc
+	g++ -Wall main.cpp btcnet.cpp $(shell pkg-config --cflags --libs libczmq++ libbitcoin) -lboost_filesystem -o brc
 
